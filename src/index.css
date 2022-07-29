@@ -1,12 +1,23 @@
 /* GLOBAL */
 body {
-    background-color: lightgray;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     background-image: url('./images/trixion-sky-clean.png');
     zoom: 1.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
 
 /* TOP CONTAINER */
 .top-container {

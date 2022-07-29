@@ -2,10 +2,10 @@ import React from 'react'
 
 const Disclaimer = () => {
     const style = {
-        // opacity: 0.9,
-        fontSize: '14px',
-        color: 'red',
-        fontFamily: 'Open Sans'
+        fontSize: '16px',
+        color: 'rgb(50, 50, 80)',
+        fontFamily: 'Open Sans',
+        fontWeight: '750'
     }
 
     return (

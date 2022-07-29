@@ -7,11 +7,13 @@ function Output (props) {
         color: 'red',
         fontFamily: 'Open Sans',
         fontSize: '20px',
-        fontWeight: 'bold'
+        fontWeight: 'bolder'
     }
 
     const multiplierStyle = {
         fontFamily: 'Open Sans',
+        color: 'rgb(50, 50, 80)',
+        fontWeight: '900'
     }
 
     const multi1 = getMultiplier(props.option1Data)
