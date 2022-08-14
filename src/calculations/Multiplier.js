@@ -45,6 +45,10 @@ function getMultiplier (option) {
                        obj.engraving === 'Ether Predator') {
                         engAtk += engravDict[obj.engraving][obj.lvl]['Atk']/100
                        }
+              else if (obj.engraving === 'Adrenaline') {
+                engAtk += engravDict[obj.engraving][obj.lvl]['Atk']/100
+                crit += engravDict[obj.engraving][obj.lvl]['crit']/100
+              }
               else {
                 engDmg *= engravDict[obj.engraving][obj.lvl]['dmg'] !== 0 ?
                          1+engravDict[obj.engraving][obj.lvl]['dmg']/100 : 1
