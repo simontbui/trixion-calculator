@@ -1,3 +1,3 @@
-#Clone
-#`npm install`
-#`npm start`
+# Clone
+`npm install`
+`npm start`
