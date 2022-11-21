@@ -25,6 +25,7 @@ function getMultiplier (option) {
     let crit = 0
     let critDmg = 0
     let dmg = 0
+    let moveSpeed = option[9]["moveSpeed"]
     let kbw = false
     let engAtk = 1
     let engDmg = 1
@@ -35,7 +36,7 @@ function getMultiplier (option) {
             critDmg += parseFloat(obj.critDmg)
         } else if ('dmg' in obj) {
             dmg = obj.dmg < 0 ? 0 : 1+obj.dmg/100
-        }      
+        } 
         else if ('engraving' in obj && obj.engraving !== null && obj.lvl !== null) {
             if (obj.engraving === 'Keen Blunt Weapon') {
                 kbw = true
@@ -48,6 +49,12 @@ function getMultiplier (option) {
               else if (obj.engraving === 'Adrenaline') {
                 engAtk += engravDict[obj.engraving][obj.lvl]['Atk']/100
                 crit += engravDict[obj.engraving][obj.lvl]['crit']/100
+              }
+              else if (obj.engraving === 'Raid Captain') {
+                if (moveSpeed > 0) {
+                    engDmg *= 1 + (engravDict[obj.engraving][obj.lvl]['dmg'] * moveSpeed)/100
+                }
+                    
               }
               else {
                 engDmg *= engravDict[obj.engraving][obj.lvl]['dmg'] !== 0 ?

@@ -19,8 +19,11 @@ class App extends Component {
                 return {id: 'dmg', dmg: 0}
             }
             else if (i === 9) {
-                return {multiplier: 3.5.toFixed(2)}
+                return {id: "moveSpeed", moveSpeed: 0}
             }
+            // else if (i === 9) {
+            //     return {multiplier: 3.5.toFixed(2)}
+            // }
             return {id: i, engraving: null, lvl: null}
         }),
         option2: new Array(10).fill().map(function(_, i)  {
@@ -34,8 +37,11 @@ class App extends Component {
                 return {id: 'dmg', dmg: 0}
             }
             else if (i === 9) {
-                return {multiplier: 6.5.toFixed(2)}
+                return {id: "moveSpeed", moveSpeed: 0}
             }
+            // else if (i === 9) {
+            //     return {multiplier: 6.5.toFixed(2)}
+            // }
             return {id: i, engraving: null, lvl: null}
         })  
     }
@@ -121,37 +127,34 @@ class App extends Component {
     render() {
         return (
             <>
-                <div className='top-container'><h1>Trixion Calculator</h1></div>
-                <div className='options-container'>
-                    <div className='option-1'>
-                        <Option1
-                            option1={this.state.option1}
-                            handleLeftEngChange={this.handleLeftEngChange}
-                            handleLeftLvlChange={this.handleLeftLvlChange}
-                            handleLeftInputChange={this.handleLeftInputChange}
-                        />
+                <div className="master-div">
+                    <div className='top-container'></div>
+                    <div className='options-container'>
+                        <div className='option-1'>
+                            <Option1
+                                option1={this.state.option1}
+                                handleLeftEngChange={this.handleLeftEngChange}
+                                handleLeftLvlChange={this.handleLeftLvlChange}
+                                handleLeftInputChange={this.handleLeftInputChange}
+                            />
+                        </div>
+                        <div className='option-2'>
+                            <Option2 
+                                option2={this.state.option2}
+                                handleRightEngChange={this.handleRightEngChange}
+                                handleRightLvlChange={this.handleRightLvlChange}
+                                handleRightInputChange={this.handleRightInputChange}
+                            />
+                        </div>
                     </div>
-                    <div className='option-2'>
-                        <Option2 
-                            option2={this.state.option2}
-                            handleRightEngChange={this.handleRightEngChange}
-                            handleRightLvlChange={this.handleRightLvlChange}
-                            handleRightInputChange={this.handleRightInputChange}
-                        />
-                    </div>
-                </div>
 
-                <div className='output-disclaimer-container'>
-                    {/* <p>{this.state.option1[0].engraving}</p>
-                    <p>{this.state.option1[1].engraving}</p>
-                    <p>{this.state.option1[2].engraving}</p>
-                    <p>{this.state.option1[3].engraving}</p>
-                    <p>{this.state.option1[4].engraving}</p>
-                    <p>{this.state.option1[5].engraving}</p> */}
-                    <Output 
-                        option1Data={this.state.option1} option2Data={this.state.option2}
-                    /> 
-                    <Disclaimer />
+                    <div className='output-disclaimer-container'>
+                        <Output 
+                            option1Data={this.state.option1} option2Data={this.state.option2}
+                        /> 
+                        <Disclaimer />
+                    </div>
+
                 </div>
             </>
         )

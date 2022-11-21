@@ -64,6 +64,11 @@ class Option1 extends Component {
                                 id='dmg'
                                 onChange={(e) => handleLeftInputChange(e)}
                             />
+                            <input 
+                                type='number' placeholder='Move Speed'
+                                id='moveSpeed'
+                                onChange={(e) => handleLeftInputChange(e)}
+                            />
                         </li>
                     </ul>
                 </div>

@@ -9,7 +9,7 @@ const engravArr = [
     'Increase Mass',
     'Keen Blunt Weapon',
     'Master Brawler',
-    'Master of Ambush',
+    'Ambush Master',
     "Master's Tenacity",
     'MP Efficiency Increase',
     'Precise Dagger',
@@ -17,6 +17,8 @@ const engravArr = [
     'Stabilized Status',
     'Super Charge'
 ]
+
+engravArr.sort()
 
 let engravDict = {}
 engravArr.forEach(engraving => {
@@ -27,6 +29,10 @@ engravArr.forEach(engraving => {
     }
 } )
 
+//Raid Captain bonuses
+engravDict["Raid Captain"][1]['dmg'] = .1
+engravDict["Raid Captain"][2]['dmg'] = .22
+engravDict["Raid Captain"][3]['dmg'] = .45
 
 //All Out Attack bonuses
 engravDict["All Out Attack"][1]['dmg'] = 4
@@ -81,10 +87,10 @@ engravDict["Master Brawler"][1]['dmg'] = 5
 engravDict["Master Brawler"][2]['dmg'] = 12
 engravDict["Master Brawler"][3]['dmg'] = 25
 
-//Master of Ambush bonuses
-engravDict["Master of Ambush"][1]['dmg'] = 5
-engravDict["Master of Ambush"][2]['dmg'] = 12
-engravDict["Master of Ambush"][3]['dmg'] = 25
+//Ambush Master bonuses
+engravDict["Ambush Master"][1]['dmg'] = 5
+engravDict["Ambush Master"][2]['dmg'] = 12
+engravDict["Ambush Master"][3]['dmg'] = 25
 
 //Master's Tenacity bonuses
 engravDict["Master's Tenacity"][1]['dmg'] = 3

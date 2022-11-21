@@ -7,15 +7,19 @@ function Output (props) {
         color: 'red',
         fontFamily: 'Open Sans',
         fontSize: '20px',
-        fontWeight: 'bolder'
+        fontWeight: 'bolder',
+        textAlign: "center"
     }
 
     const multiplierStyle = {
         fontFamily: 'Open Sans',
         color: 'rgb(50, 50, 80)',
-        fontWeight: '900'
+        fontWeight: '900',
+        textAlign: "center",
+        display: "flex",
+        flexDirection: "row",
     }
-
+    
     const multi1 = getMultiplier(props.option1Data)
     const multi2 = getMultiplier(props.option2Data)
     let relativeOutput
@@ -29,8 +33,10 @@ function Output (props) {
 
     return (
         <>
-            <p style={multiplierStyle}>Option #1: {multi1.toFixed(2)}</p>
-            <p style={multiplierStyle}>Option #2: {multi2.toFixed(2)}</p>
+            <div className="option-multipliers">
+                <p>Option #1: {multi1.toFixed(2)}</p>
+                <p>Option #2: {multi2.toFixed(2)}</p>
+            </div>
             {relativeOutput}
         </>
     )

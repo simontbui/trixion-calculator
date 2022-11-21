@@ -5,11 +5,12 @@ const Disclaimer = () => {
         fontSize: '16px',
         color: 'rgb(50, 50, 80)',
         fontFamily: 'Open Sans',
-        fontWeight: '750'
+        fontWeight: '750',
+        color: "red"
     }
 
     return (
-        <p style={ style}>This calculates the damage multiplier. This is not to be confused with DPS, which is affected by attack speed and cooldown reduction. For this, Trixion parses would be useful.</p>
+        <p className="disclaimer-text" style={ style }>The default values for crit rate, crit damage, other damage, and move speed are 0, 200, 0, and 0, respectively. For example if you leave crit damage blank, the calculator will assume 200% crit damage.</p>
     )
 }
 
