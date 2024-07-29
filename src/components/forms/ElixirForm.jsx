@@ -13,8 +13,8 @@ const ElixirForm = ({ options, optionNum, handleElixirSetValChange, handleElixir
                         onChange={(e) => handleElixirSetValChange(e, optionNum)}
                     >
                         <MenuItem value={""}>None</MenuItem>
-                        <MenuItem value={"Master"}>Master</MenuItem>
                         <MenuItem value={"Critical"}>Critical</MenuItem>
+                        <MenuItem value={"Master"}>Master</MenuItem>
                     </Select>
                 </FormControl>
             </Grid>

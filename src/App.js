@@ -161,7 +161,7 @@ const App = () => {
             direction="column"
             justifyContent="center"
             alignItems="center"
-            sx={{ width: 1, height: "100vh", mt: 7 }}
+            sx={{ width: 1, height: "100vh", mt: 1 }}
         >
             <Paper elevation={3} sx={{ mx: 2, p: 3, backgroundColor: "#b0bec5" }}>
                 <Grid container wrap="nowrap" direction="row" justifyContent="center">
