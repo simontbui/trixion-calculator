@@ -32,6 +32,7 @@ export const getMultiplier = (option) => {
     let elixirBonus = 1;
     if (elixirSet.level !== 0 && elixirSet.value === "Critical") {
         elixirSet.level === 1 ? elixirBonus *= 1.06 : elixirBonus *= 1.12
+        elixirBonus *= totalCrit
     } else if (elixirSet.level !== 0 && elixirSet.value === "Master") {
         totalCrit += .07
 

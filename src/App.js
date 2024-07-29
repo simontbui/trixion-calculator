@@ -209,7 +209,7 @@ const App = () => {
                         {resultText}
                     </Typography>
                     <Typography sx={{ pt: 4 }}>
-                        The calculator expects crit rate and crit damage values in the format shown in game. For example, enter in 80% for crit rate and not 0.80. The default crit damage is 200 if you have no bonuses. Include any engraving crit rate and crit damage bonuses (e.g. precise dagger) when entering in values into the respective fields. This calculator calculates raw multipliers; it does not account for uptime, cooldown reduction, attack speed, etc.
+                        The calculator expects crit rate and crit damage values in the format shown in game. For example, enter in 80% for crit rate and not 0.80. The default crit damage is 200 if you have no bonuses. If any engraving, elixirs, etc. that affect your crit or crit dmg are selected, exclude those bonuses when entering in those stat numbers. This calculator calculates raw multipliers; it does not account for uptime, cooldown reduction, attack speed, etc.
                     </Typography>
                 </Container>
             </Paper>
