@@ -1,0 +1,9 @@
+export const KEEN_BLUNT_WEAPON = "Keen Blunt Weapon";
+export const CRIT_RATE = "critRate";
+export const CRIT_DMG = "critDmg";
+export const DMG = "dmg";
+export const ATK_POWER = "atkPower";
+export const EVO_DMG = "evoDmg";
+export const OTHER_DMG = "otherDmg";
+export const FRONT_ATK = "frontAtk";
+export const BACK_ATK = "backAtk";
